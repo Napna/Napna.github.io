@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    position: relative;
+}
+
+.log-in-page {
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f4f8;
+    padding: 1px;
+    box-sizing: border-box;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.log-in-box {
+    max-width: 850px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 500px;
+    background-color: gray;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.log-in-box-leftside {
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    text-align: center;
+    color: white;
+    transition: 500ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.log-in-box-rightside {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    text-align: center;
+    transition: 500ms;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.log-in-box-rightside-forgot-password-wrapper {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right:0;
+    transform: translate(100%);
+    transition: all 150ms;
+}
+
+.log-in-box-leftside-full {
+    .log-in-box-leftside {
+        width: 100%;
+    }
+    .log-in-box-rightside {
+        transform: translateX(100%);
+    }
+    .log-in-title {
+        position: relative;
+        top: 20px;
+    }
+    .log-in-content {
+        position: relative;
+        top: -20px;
+        opacity: 0;
+    }
+}
+
+.log-in-box-rightside-forgot-password-wrapper-show {
+    transform: translateX(0);
+}
+
+.log-in-title {
+    margin-top: 200px;
+    position: relative;
+    top: 0px;
+    transition: 300ms;
+    transition-delay: 500ms;
+}
+
+.log-in-company-name {
+    position: absolute;
+    top: 15px;
+    left: 20px
+}
+
+.log-in-content {
+    position: relative;
+    font-size: 20px;
+    transition: 300ms;
+    transition-delay: 500ms;
+    top: 0px;
+}
+
+.log-in-box-rightside-wrapper {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+}
+
+.log-in-box-rightside-title {
+    margin-top: 140px;
+    margin-bottom: 20px;
+    color: #4686f3;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    padding-left: 10px;
+    margin: 5px auto;
+    border: none;
+    background-color: rgb(245, 243, 243);
+    border-left: #2575fc solid 5px;
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+input[type=checkbox] + label {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #707070;
+    border-radius: 50%;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    top: 2px;
+    transition: 200ms;
+    svg {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+input[type=checkbox]:checked + label {
+    border: none;
+    background-color: #4686f3;
+}
+
+label + label {
+    height: 20px;
+    cursor: pointer;
+    color: #505050;
+    vertical-align: top;
+}
+
+.log-in-option {
+    text-align: left;
+}
+
+.log-in-forgot-password {
+    position: absolute;
+    right: 0;
+}
+
+input::placeholder {
+    color: #A0A0A0;
+}
+
+.log-in-page-button {
+    border: none;
+    background-color: #2c64ff;
+    color: white;
+}
+
+.log-in-page-button:hover {
+    background-color: #2c57cc;
+}
+
+.log-in-page-button:focus {
+    outline: none;
+}
+
+.log-in-button {
+    margin-top: 15px;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.log-in-modal-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    transition: all 100ms;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.log-in-modal-wrapper-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.log-in-modal {
+    background-color: #FFFFFF;
+    width: 297px;
+    height: 210px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.log-in-modal-text {
+    margin-top: 70px;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.log-in-modal-btn-close {
+    width: 35%;
+    height: 36px;
+    border-radius: 2px;
+}
+
+.log-in-forgot-password-btn-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: white;
+    color: #909090;
+    border: none;
+}
+
+.log-in-forgot-password-btn-back > svg {
+    transition: 350ms;
+    -webkit-transition: 350ms;
+    -moz-transition: 350ms;
+    -ms-transition: 350ms;
+    -o-transition: 350ms;
+}
+
+.log-in-forgot-password-btn-back:hover > svg {
+    color: black;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+    transition: 350ms;
+    -webkit-transition: 350ms;
+    -moz-transition: 350ms;
+    -ms-transition: 350ms;
+    -o-transition: 350ms;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.log-in-forgot-password-btn-back:focus {
+    outline: none;
+}
+
+.log-in-forgot-password-button {
+    margin-top: 15px;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.log-in-box-rightside-content {
+    color: #505050;
+
+}
+
+.log-in-page footer {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 1px);
+    box-sizing: border-box;
+    text-align: center;
+    color: #505050;
+}
+
+.hidden {
+    display: none;
+}
+
+.main-page-wrapper {
+    width: 100%;
+}
