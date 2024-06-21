@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <title>Login</title>
+    </head>
+    <body>
+        
+        <div class="log-in-page"> <!-- LogIn page wrapper -->
+            <div class="log-in-box log-in-box-leftside-full"> <!-- LogIn Box, default is leftside full -->
+                <div class="log-in-box-leftside"> <!-- Left side for title -->
+                    <p class="log-in-company-name">◎ ASDF</p>
+                    <h1 class="log-in-title">TITLE</h1>
+                    <p class="log-in-content">Welcome back!</p>
+                </div>
+                <div class="log-in-box-rightside"> <!-- Right side for input -->
+                    <div class="log-in-box-rightside-wrapper">
+                        <h4 class="log-in-box-rightside-title">Login Account</h4>
+                        <form action="../../java/com/example/App.java" method="post"> <!-- With form tag, an input tag can send values to the server -->
+                            <input placeholder="ID" type="text" name="userId" id="inputUserId"> <!-- userId -->
+                            <input placeholder="Password" type="password" name="userPassword" id="inputUserPassword"> <!-- userPassword -->
+                            <div class="log-in-option"> <!-- save id and forgot password -->
+                                <input type="checkbox" name="saveId" id="saveId">
+                                <label for="saveId">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                                    </svg>
+                                </label>
+                                <label for="saveId">Save ID</label>
+                                <a class="log-in-forgot-password" href="#">Forgot password?</a>
+                            </div>
+                            <button class="log-in-button log-in-page-button" type="submit">Login</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="log-in-box-rightside-forgot-password-wrapper"> <!-- Forgot Password screen -->
+                    <button class="log-in-forgot-password-btn-back"> <!-- close button -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223"/>
+                        </svg>
+                    </button>
+                    <div class="log-in-box-rightside-wrapper">
+                        <h4 class="log-in-box-rightside-title">Forgot Password?</h2>
+                        <p class="log-in-box-rightside-content">Please enter the email that you used when you signed up.</p>
+                        <form action="../../java/com/example/App.java" method="post">
+                            <input placeholder="Email" type="email" name="userEmail" id="inputUserEmail">
+                            <button class="log-in-forgot-password-button log-in-page-button" type="submit">Sumbit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="log-in-modal-wrapper"> <!-- Popup window  -->
+                <div class="log-in-modal">
+                    <p class="log-in-modal-text">text content</p> <!-- When it is invoked, JavaScript replaces the text content -->
+                    <button class="log-in-modal-btn-close log-in-page-button">Close</button>
+                </div>
+            </div>
+            <footer>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+                        <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+                    </svg> <!-- A copyright symbol (the special letter has broken, use svg format alternatively) -->
+                    2024 napna1215 all right reserved. / napna1215@gmail.com
+                </p>
+            </footer>
+        </div>
+
+        <script src="js/script.js"></script>
+
+    </body>
+</html>
